@@ -1,0 +1,34 @@
+nav {
+  padding: 25px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+
+    li {
+      list-style: none;
+      flex-grow: 1;
+      text-align: center;
+      font-size: 15px;
+
+      &:nth-child(3) {
+        flex-grow: 2;
+        font-size: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:first-child a {
+        color: #fff;
+      }
+    }
+  }
+}

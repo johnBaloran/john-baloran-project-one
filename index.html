@@ -4,43 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/456be152d4.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles/style.css" />
+
     <title>Sophie</title>
   </head>
   <body>
     <header>
-      <div class="wrapper">
-        <nav>
-          <ul>
-            <li>
-              <a href="#">HOME</a>
-            </li>
-            <li>
-              <a href="#">ABOUT</a>
-            </li>
-            <li>
-              <a href="#">SOPHIE</a>
-            </li>
-            <li>
-              <a href="#">BLOG</a>
-            </li>
-            <li>
-              <a href="#">CONTACT</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header">
-          <img
-            src="./assets/circle-text.png"
-            alt="It's all about"
-            class="circleText"
-          />
-          <h1>SOPHIE</h1>
-          <div class="sophieImg">
+      <div class="mainHeader">
+        <div class="wrapper">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">home</a>
+              </li>
+              <li>
+                <a href="#about">about</a>
+              </li>
+              <li>
+                <a href="#">sophie</a>
+              </li>
+              <li>
+                <a href="blog.html">blog</a>
+              </li>
+              <li>
+                <a href="contact.html">contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="headerTitle">
             <img
-              src="./assets/home-image-1.jpg"
-              alt="sophie with orange eyes"
+              src="./assets/circle-text.png"
+              alt="It's all about"
+              class="circleText"
             />
+            <h1>SOPHIE</h1>
+            <div class="sophieImg">
+              <img
+                src="./assets/home-image-1.jpg"
+                alt="sophie with orange eyes"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -53,15 +60,28 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               eaque vero aliquid aperiam. Iure itaque inventore provident nulla
-              hic possimus mollitia minima aspernatur est deserunt!
+              hic possimus mollitia minima aspernatur est deserunt! Lorem, ipsum
+              dolor sit amet consectetur adipisicing elit. Id possimus modi
+              praesentium nam labore et blanditiis.
             </p>
-            <button>FIND OUT MORE</button>
+            <div class="btn">
+              <button>FIND OUT MORE</button>
+            </div>
           </article>
+        </div>
+      </section>
 
-          <div>
-            <img src="./assets/home-image-2.jpg" alt="dog out the car window" />
+      <section class="articles">
+        <div class="wrapper">
+          <div class="article article1">
+            <div class="articleImg">
+              <img
+                src="./assets/home-image-2.jpg"
+                alt="dog out the car window"
+              />
+            </div>
             <article>
-              <h2>SOPHIE'S FAVORITE THINGS</h2>
+              <h3>SOPHIE'S FAVORITE THINGS</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
                 nisi, amet facere, id recusandae dolores, at ipsum suscipit
@@ -70,10 +90,12 @@
               <button>READ MORE</button>
             </article>
           </div>
-          <div>
-            <img src="./assets/home-image-3.jpg" alt="dog out the car window" />
+          <div class="article article2">
+            <div class="articleImg">
+              <img src="./assets/home-image-3.jpg" alt="beach vibe" />
+            </div>
             <article>
-              <h2>WHERE SHE'S TRAVELLED</h2>
+              <h3>WHERE SHE'S TRAVELLED</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
                 nisi, amet facere, id recusandae dolores, at ipsum suscipit
@@ -84,6 +106,111 @@
           </div>
         </div>
       </section>
+      <section class="moreLinks" id="about">
+        <div class="wrapper">
+          <div class="linksRow">
+            <div class="link">
+              <div class="photosIcon">
+                <i class="fas fa-image fa-2x"></i>
+              </div>
+              <div class="photosDesc">
+                <h3>photos</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+                  consequuntur perspiciatis molestias voluptate quae doloribus.
+                  Nostrum mollitia similique molestias! Placeat debitis
+                  necessitatibus voluptatem delectus laboriosam.
+                </p>
+              </div>
+            </div>
+            <div class="link">
+              <div class="photosIcon">
+                <i class="fas fa-user fa-2x"></i>
+              </div>
+              <div class="photosDesc">
+                <h3>about</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+                  consequuntur perspiciatis molestias voluptate quae doloribus.
+                  Nostrum mollitia similique molestias! Placeat debitis
+                  necessitatibus voluptatem delectus laboriosam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="linksRow">
+            <div class="link">
+              <div class="photosIcon">
+                <i class="fas fa-tv fa-2x"></i>
+              </div>
+              <div class="photosDesc">
+                <h3>blog</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+                  consequuntur perspiciatis molestias voluptate quae doloribus.
+                  Nostrum mollitia similique molestias! Placeat debitis
+                  necessitatibus voluptatem delectus laboriosam.
+                </p>
+              </div>
+            </div>
+            <div class="link">
+              <div class="photosIcon">
+                <i class="fas fa-phone fa-2x"></i>
+              </div>
+              <div class="photosDesc">
+                <h3>get in touch</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+                  consequuntur perspiciatis molestias voluptate quae doloribus.
+                  Nostrum mollitia similique molestias! Placeat debitis
+                  necessitatibus voluptatem delectus laboriosam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="backgroundImgClassroom"></section>
+      <section class="journey">
+        <div class="wrapper">
+          <article>
+            <figure class="journeyImg">
+              <img src="./assets/home-image-5.jpg" alt="Sophie side pose" />
+            </figure>
+            <div class="journeyDesc">
+              <h2>sophie's journey</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                dignissimos sit nobis mollitia vitae laborum maiores non vero
+                blanditiis itaque odio maxime voluptas doloribus minus beatae ea
+                at quae harum, voluptatibus praesentium quidem. Sapiente, id
+                molestias veniam laudantium saepe ipsa, laboriosam soluta at
+                quis dolores quas illum, maiores eius nam?
+              </p>
+              <button>find out more</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="travelPhotos">
+        <div class="wrapper">
+          <figure class="travelPhoto">
+            <img src="./assets/home-image-6.jpg" alt="Bicycle" />
+          </figure>
+          <figure class="travelPhoto">
+            <img
+              src="./assets/home-image-7.jpg"
+              alt="building with tunnel in the middle"
+            />
+          </figure>
+          <figure class="travelPhoto">
+            <img src="./assets/home-image-8.jpg" alt="beach umbrella" />
+          </figure>
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>Copyright © 2018 HackerYou</p>
+    </footer>
   </body>
 </html>
