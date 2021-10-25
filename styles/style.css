@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;700&display=swap");
 nav {
   padding: 25px;
@@ -39,6 +40,41 @@ nav ul li a {
 }
 nav ul li:first-child a {
   color: #fff;
+}
+
+form {
+  background-color: #cecdcc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+form .inputs div {
+  -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+}
+form .inputs div input {
+  width: 100%;
+  height: 45px;
+  padding-left: 10px;
+}
+form textarea {
+  margin: 20px 0;
+  height: 300px;
+  padding: 25px 10px;
 }
 
 /*
@@ -88,11 +124,24 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 p {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -392,12 +441,6 @@ header .mainHeader .headerTitle .sophieImg::after {
   gap: 25px;
 }
 
-footer {
-  background-color: #2c2c2c;
-  color: #fff;
-  text-align: center;
-}
-
 .contact {
   background-color: #cecdcc;
 }
@@ -440,8 +483,21 @@ footer {
   font-weight: bold;
   padding: 10px 0;
 }
-.contact .contactForm form {
+
+.blog {
   background-color: #cecdcc;
+}
+.blog h1 {
+  font-size: 70px;
+  margin-top: -50px;
+}
+.blog .blogBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 0;
+}
+.blog .blogBody .aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,28 +505,68 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  margin-right: 50px;
 }
-.contact .contactForm form .inputs {
+.blog .blogBody .aside aside {
+  background-color: #fff;
+  margin-bottom: 25px;
+  padding: 30px;
+}
+.blog .blogBody .aside aside h4 {
+  padding: 10px 0;
+}
+.blog .blogBody .aside .recentPosts ul {
+  padding-left: 10px;
+  list-style: none;
+}
+.blog .blogBody .aside .recentPosts ul li {
+  margin-bottom: 5px;
+}
+.blog .blogBody .aside .recentPosts ul li::before {
+  content: "•";
+  color: #f6a823;
+  display: inline-block;
+  width: 15px;
+}
+.blog .blogBody .article {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+}
+.blog .blogBody .article article {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+.blog .blogBody .article article:nth-child(odd) {
+  position: relative;
+}
+.blog .blogBody .article article:nth-child(odd)::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #f6a823;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.blog .blogBody .article article:not(:first-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-.contact .contactForm form .inputs div {
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+.blog .blogBody .article article:not(:first-child) figure {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin-right: 15px;
 }
-.contact .contactForm form .inputs div input {
-  width: 100%;
-  height: 45px;
-  padding-left: 10px;
+.blog .blogBody .article article p {
+  padding-bottom: 10px;
 }
-.contact .contactForm form textarea {
-  margin: 20px 0;
-  height: 300px;
-  padding: 25px 10px;
+
+footer {
+  background-color: #2c2c2c;
+  color: #f6f6f6;
+  text-align: center;
 }
