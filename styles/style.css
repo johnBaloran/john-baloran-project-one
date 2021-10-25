@@ -88,6 +88,10 @@ Color palette$
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -102,7 +106,7 @@ img {
 h1 {
   font-family: "Lora", sans-serif;
   font-weight: 700;
-  font-size: 130px;
+  font-size: 8.125rem;
   line-height: 90px;
   letter-spacing: 0px;
   text-transform: uppercase;
@@ -112,7 +116,7 @@ h2 {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 2.625rem;
   text-transform: uppercase;
 }
 
@@ -120,7 +124,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -128,13 +132,13 @@ h4 {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 32px;
   letter-spacing: 0px;
 }
@@ -146,6 +150,7 @@ a {
 
 button {
   font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
   line-height: 32px;
@@ -165,7 +170,6 @@ header .mainHeader {
   background-color: #f6a823;
 }
 header .mainHeader .headerTitle {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,16 +184,17 @@ header .mainHeader .headerTitle {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header .mainHeader .headerTitle h1 {
-  padding-left: 50px;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  text-align: center;
+header .mainHeader .headerTitle .sophieTitle {
+  position: relative;
+  -ms-flex-negative: 4;
+      flex-shrink: 4;
+  height: 250px;
+  padding: 75px 0 0 50px;
 }
 header .mainHeader .headerTitle .circleText {
   position: absolute;
   width: 200px;
-  top: 200px;
+  top: 0;
   left: 0px;
 }
 header .mainHeader .headerTitle .sophieImg {
@@ -199,6 +204,8 @@ header .mainHeader .headerTitle .sophieImg {
   z-index: 9999;
   top: 50px;
   left: -20px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 header .mainHeader .headerTitle .sophieImg img {
   max-width: 100%;
