@@ -16,6 +16,7 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  border: red 1px solid;
 }
 nav ul li {
   list-style: none;
@@ -42,6 +43,19 @@ nav ul li:first-child a {
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+  nav ul {
+    width: 70%;
+  }
+}
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  nav ul {
+    width: 75%;
+  }
+}
+/* Landscape phones and down */
 form {
   background-color: #cecdcc;
   display: -webkit-box;
@@ -88,6 +102,11 @@ Color palette$
   padding: 0;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 16px;
 }
@@ -98,6 +117,7 @@ img {
 }
 
 .wrapper {
+  border: red 1px solid;
   margin: 0 auto;
   width: 80%;
   max-width: 1200px;
@@ -106,7 +126,7 @@ img {
 h1 {
   font-family: "Lora", sans-serif;
   font-weight: 700;
-  font-size: 8.125rem;
+  font-size: 8rem;
   line-height: 90px;
   letter-spacing: 0px;
   text-transform: uppercase;
@@ -116,7 +136,7 @@ h2 {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
-  font-size: 2.625rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
@@ -124,7 +144,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
 }
 
@@ -138,7 +158,7 @@ h4 {
 
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 32px;
   letter-spacing: 0px;
 }
@@ -186,8 +206,6 @@ header .mainHeader .headerTitle {
 }
 header .mainHeader .headerTitle .sophieTitle {
   position: relative;
-  -ms-flex-negative: 4;
-      flex-shrink: 4;
   height: 250px;
   padding: 75px 0 0 50px;
 }
@@ -204,8 +222,6 @@ header .mainHeader .headerTitle .sophieImg {
   z-index: 9999;
   top: 50px;
   left: -20px;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
 }
 header .mainHeader .headerTitle .sophieImg img {
   max-width: 100%;
@@ -227,7 +243,6 @@ header .mainHeader .headerTitle .sophieImg::after {
 }
 .home .who {
   padding: 150px 0;
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,6 +259,7 @@ header .mainHeader .headerTitle .sophieImg::after {
 .articles {
   position: relative;
   z-index: 9999;
+  height: 105vh;
 }
 .articles .article {
   display: -webkit-box;
@@ -252,7 +268,6 @@ header .mainHeader .headerTitle .sophieImg::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 100px;
 }
 .articles .article .articleImg {
   -ms-flex-preferred-size: 50%;
@@ -276,9 +291,6 @@ header .mainHeader .headerTitle .sophieImg::after {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 25px 0 0 100px;
 }
 .articles .article1 article button {
@@ -307,7 +319,7 @@ header .mainHeader .headerTitle .sophieImg::after {
 }
 .articles .article2 .articleImg {
   position: relative;
-  bottom: -30px;
+  bottom: -90px;
   z-index: -1;
 }
 .articles .article2 .articleImg::before {
@@ -340,8 +352,7 @@ header .mainHeader .headerTitle .sophieImg::after {
 
 .moreLinks {
   background-color: #cecdcc;
-  height: 700px;
-  margin-top: -80px;
+  padding: 75px 0;
 }
 .moreLinks .wrapper {
   height: 100%;
@@ -407,6 +418,7 @@ header .mainHeader .headerTitle .sophieImg::after {
   background-color: #cecdcc;
 }
 .journey article {
+  border: solid 1px red;
   padding: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -416,9 +428,11 @@ header .mainHeader .headerTitle .sophieImg::after {
           align-items: center;
 }
 .journey article figure {
+  border: solid 1px red;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   position: relative;
+  z-index: 1;
 }
 .journey article figure::before {
   content: "";
@@ -577,3 +591,365 @@ footer {
   color: #f6f6f6;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  header .mainHeader {
+    height: 85vh;
+  }
+  header .mainHeader .headerTitle .sophieTitle {
+    padding: 90px 0 0 40px;
+  }
+  header .mainHeader .headerTitle .circleText {
+    width: 150px;
+    top: 40px;
+  }
+  header .mainHeader .headerTitle .sophieImg {
+    top: 50px;
+  }
+
+  .home .who {
+    padding: 100px 0;
+  }
+
+  .articles {
+    position: relative;
+    z-index: 9999;
+    padding-bottom: 0px;
+    height: 75vh;
+  }
+  .articles .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0px;
+  }
+  .articles .article .articleImg {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .articles .article article {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .articles .article article p {
+    padding: 15px 0;
+  }
+  .articles .article1 article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 50px 0 0 75px;
+  }
+  .articles .article1 article button {
+    -ms-flex-item-align: start;
+        align-self: start;
+  }
+  .articles .article1 .articleImg {
+    position: relative;
+    top: -30px;
+  }
+  .articles .article1 .articleImg::before {
+    content: "";
+    background-color: #a82706;
+    width: 150%;
+    height: 95%;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    right: -20px;
+  }
+  .articles .article2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .articles .article2 .articleImg {
+    position: relative;
+    bottom: -50px;
+    z-index: -1;
+  }
+  .articles .article2 .articleImg::before {
+    content: "";
+    background-color: #f6a823;
+    width: 150%;
+    height: 95%;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: 20px;
+  }
+  .articles .article2 article {
+    padding: 50px 50px 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+
+  .moreLinks {
+    background-color: #cecdcc;
+    padding: 50px 0;
+  }
+  .moreLinks .wrapper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .moreLinks .wrapper .linksRow {
+    padding-top: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .moreLinks .wrapper .linksRow .link {
+    padding-right: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc {
+    padding-left: 35px;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc p {
+    padding: 15px 0;
+  }
+  .moreLinks .wrapper .linksRow .link .photosIcon {
+    position: relative;
+    z-index: 9999;
+  }
+  .moreLinks .wrapper .linksRow .link .photosIcon::before {
+    content: "";
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f6a823;
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    z-index: -1;
+  }
+
+  .backgroundImgClassroom {
+    width: 100%;
+    height: 400px;
+    background-image: url(../../assets/home-image-4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .journey {
+    background-color: #cecdcc;
+  }
+  .journey article {
+    padding: 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .journey article figure {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+    position: relative;
+  }
+  .journey article figure::before {
+    content: "";
+    background-color: #f6a823;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 15px;
+  }
+  .journey article .journeyDesc {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+    padding-left: 100px;
+  }
+  .journey article .journeyDesc p {
+    padding: 15px 0;
+  }
+}
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  html {
+    font-size: 12px;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  header .mainHeader {
+    height: 75vh;
+  }
+  header .mainHeader .headerTitle .sophieTitle {
+    padding: 70px 0 0 30px;
+  }
+  header .mainHeader .headerTitle .circleText {
+    width: 120px;
+    top: 45px;
+  }
+  header .mainHeader .headerTitle .sophieImg {
+    top: 15px;
+  }
+
+  .home .who {
+    padding: 100px 0;
+  }
+
+  .articles {
+    border: solid 1px red;
+    position: relative;
+    z-index: 9999;
+    height: 100vh;
+  }
+  .articles .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  .articles .article .articleImg {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .articles .article article {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .articles .article article p {
+    padding: 15px 0;
+  }
+  .articles .article1 article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0 0 75px;
+    border: solid 1px red;
+  }
+  .articles .article1 article button {
+    -ms-flex-item-align: start;
+        align-self: start;
+  }
+  .articles .article1 .articleImg {
+    position: relative;
+    top: -30px;
+  }
+  .articles .article1 .articleImg::before {
+    content: "";
+    background-color: #a82706;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    right: -20px;
+  }
+  .articles .article2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .articles .article2 .articleImg {
+    position: relative;
+    bottom: -50px;
+    z-index: -1;
+  }
+  .articles .article2 .articleImg::before {
+    content: "";
+    background-color: #f6a823;
+    width: 150%;
+    height: 75%;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: 20px;
+  }
+  .articles .article2 article {
+    padding: 50px 50px 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+
+  .moreLinks {
+    margin-top: 0px;
+  }
+}
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */

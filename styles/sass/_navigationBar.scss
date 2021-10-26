@@ -8,6 +8,7 @@ nav {
     height: 100%;
     align-items: center;
     margin: 0 auto;
+    border: red 1px solid;
 
     li {
       list-style: none;
@@ -31,4 +32,29 @@ nav {
       }
     }
   }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    ul {
+      width: 70%;
+    }
+  }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  nav {
+    ul {
+      width: 75%;
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
