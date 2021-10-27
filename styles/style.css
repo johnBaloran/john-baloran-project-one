@@ -10,7 +10,7 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
+  width: 70%;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -27,9 +27,6 @@ nav ul li {
   font-size: 15px;
 }
 nav ul li:nth-child(3) {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
   font-size: 30px;
 }
 nav ul li a {
@@ -56,6 +53,11 @@ nav ul li:first-child a {
   }
 }
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  nav {
+    display: none;
+  }
+}
 form {
   background-color: #cecdcc;
   display: -webkit-box;
@@ -117,7 +119,6 @@ img {
 }
 
 .wrapper {
-  border: red 1px solid;
   margin: 0 auto;
   width: 80%;
   max-width: 1200px;
@@ -180,6 +181,10 @@ button {
   padding: 2px 10px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.navigationBar {
+  display: none;
 }
 
 header .header {
@@ -291,7 +296,7 @@ header .mainHeader .headerTitle .sophieImg::after {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 25px 0 0 100px;
+  padding: 25px 0 25px 100px;
 }
 .articles .article1 article button {
   -ms-flex-item-align: start;
@@ -418,7 +423,6 @@ header .mainHeader .headerTitle .sophieImg::after {
   background-color: #cecdcc;
 }
 .journey article {
-  border: solid 1px red;
   padding: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,7 +432,6 @@ header .mainHeader .headerTitle .sophieImg::after {
           align-items: center;
 }
 .journey article figure {
-  border: solid 1px red;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   position: relative;
@@ -602,12 +605,10 @@ footer {
   }
 
   h1 {
-    font-size: 7rem;
+    color: blue;
+    font-size: 8rem;
   }
 
-  header .mainHeader {
-    height: 90vh;
-  }
   header .mainHeader .headerTitle .sophieTitle {
     padding: 90px 0 0 40px;
   }
@@ -615,205 +616,45 @@ footer {
     width: 150px;
     top: 40px;
   }
-  header .mainHeader .headerTitle .sophieImg {
-    top: 50px;
-  }
 
   .home .who {
     padding: 100px 0;
   }
 
-  .articles {
-    position: relative;
-    z-index: 9999;
-    padding-bottom: 0px;
-    height: 75vh;
-  }
-  .articles .article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-bottom: 0px;
-  }
-  .articles .article .articleImg {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .articles .article article {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .articles .article article p {
-    padding: 15px 0;
-  }
   .articles .article1 article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    padding: 50px 0 0 75px;
-  }
-  .articles .article1 article button {
-    -ms-flex-item-align: start;
-        align-self: start;
-  }
-  .articles .article1 .articleImg {
-    position: relative;
-    top: -30px;
+    padding: 50px 0 25px 75px;
   }
   .articles .article1 .articleImg::before {
-    content: "";
-    background-color: #a82706;
-    width: 150%;
     height: 95%;
-    position: absolute;
-    z-index: -1;
-    top: 20px;
-    right: -20px;
-  }
-  .articles .article2 {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
   }
   .articles .article2 .articleImg {
-    position: relative;
-    bottom: -50px;
-    z-index: -1;
+    bottom: -60px;
   }
   .articles .article2 .articleImg::before {
-    content: "";
-    background-color: #f6a823;
-    width: 150%;
     height: 95%;
-    position: absolute;
-    z-index: -1;
-    top: 20px;
-    left: 20px;
-  }
-  .articles .article2 article {
-    padding: 50px 50px 50px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    text-align: end;
   }
 
   .moreLinks {
-    background-color: #cecdcc;
     padding: 50px 0;
-  }
-  .moreLinks .wrapper {
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .moreLinks .wrapper .linksRow {
-    padding-top: 75px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .moreLinks .wrapper .linksRow .link {
-    padding-right: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .moreLinks .wrapper .linksRow .link .photosDesc {
-    padding-left: 35px;
   }
   .moreLinks .wrapper .linksRow .link .photosDesc p {
     padding: 15px 0;
   }
-  .moreLinks .wrapper .linksRow .link .photosIcon {
-    position: relative;
-    z-index: 9999;
-  }
-  .moreLinks .wrapper .linksRow .link .photosIcon::before {
-    content: "";
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #f6a823;
-    position: absolute;
-    top: -17px;
-    left: -17px;
-    z-index: -1;
-  }
 
   .backgroundImgClassroom {
-    width: 100%;
     height: 400px;
-    background-image: url(../../assets/home-image-4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
   }
 
   .journey {
     background-color: #cecdcc;
   }
-  .journey article {
-    padding: 100px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .journey article figure {
-    -ms-flex-preferred-size: 35%;
-        flex-basis: 35%;
-    position: relative;
-  }
-  .journey article figure::before {
-    content: "";
-    background-color: #f6a823;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 15px;
-    left: 15px;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
   .journey article .journeyDesc {
-    -ms-flex-preferred-size: 65%;
-        flex-basis: 65%;
-    padding-left: 100px;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
   }
   .journey article .journeyDesc p {
     padding: 15px 0;
@@ -823,6 +664,10 @@ footer {
 @media (max-width: 940px) {
   html {
     font-size: 12px;
+  }
+
+  h1 {
+    color: red;
   }
 
   .wrapper {
@@ -836,8 +681,8 @@ footer {
     padding: 70px 0 0 30px;
   }
   header .mainHeader .headerTitle .circleText {
-    width: 120px;
-    top: 45px;
+    width: 130px;
+    top: 35px;
   }
   header .mainHeader .headerTitle .sophieImg {
     top: 15px;
@@ -848,23 +693,93 @@ footer {
   }
 
   .articles {
-    border: solid 1px red;
-    position: relative;
+    height: 90vh;
+  }
+  .articles .article1 {
+    padding-bottom: 0px;
+  }
+  .articles .article1 article {
+    padding: 30px 0 45px 75px;
+  }
+  .articles .article1 .articleImg::before {
+    height: 90%;
+  }
+  .articles .article2 .articleImg {
+    bottom: -55px;
+  }
+  .articles .article2 .articleImg::before {
+    height: 90%;
+  }
+
+  .moreLinks {
+    margin-top: -25px;
+    padding: 40px 0;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc p {
+    padding: 15px 0;
+  }
+
+  .backgroundImgClassroom {
+    height: 400px;
+  }
+
+  .journey {
+    background-color: #cecdcc;
+  }
+  .journey article figure {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .journey article .journeyDesc {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  .journey article .journeyDesc p {
+    padding: 15px 0;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+
+  h1 {
+    color: pink;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  header .mainHeader {
+    height: 65vh;
+  }
+
+  .articles {
+    position: static;
     z-index: 9999;
-    height: 100vh;
+    height: 145vh;
   }
   .articles .article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
   .articles .article .articleImg {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    width: 50%;
+    padding-bottom: 25px;
   }
   .articles .article article {
     -ms-flex-preferred-size: 50%;
@@ -881,24 +796,20 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 50px 0 0 75px;
-    border: solid 1px red;
-  }
-  .articles .article1 article button {
-    -ms-flex-item-align: start;
-        align-self: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0px;
   }
   .articles .article1 .articleImg {
-    position: relative;
-    top: -30px;
+    position: static;
+    top: -40px;
   }
   .articles .article1 .articleImg::before {
+    display: none;
     content: "";
     background-color: #a82706;
     width: 150%;
@@ -909,28 +820,28 @@ footer {
     right: -20px;
   }
   .articles .article2 {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .articles .article2 .articleImg {
-    position: relative;
-    bottom: -50px;
+    position: static;
+    bottom: -80px;
     z-index: -1;
   }
   .articles .article2 .articleImg::before {
+    display: none;
     content: "";
     background-color: #f6a823;
     width: 150%;
-    height: 75%;
-    position: absolute;
+    height: 100%;
     z-index: -1;
     top: 20px;
     left: 20px;
   }
   .articles .article2 article {
-    padding: 50px 50px 50px 0;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -941,15 +852,188 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    text-align: end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: start;
   }
 
   .moreLinks {
     margin-top: 0px;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc p {
+    padding: 10px 0;
+  }
+  .moreLinks .wrapper .linksRow .link .photosIcon::before {
+    width: 50px;
+    height: 50px;
+    top: -16px;
+    left: -14px;
+  }
+
+  .journey {
+    background-color: #cecdcc;
+  }
+  .journey article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .journey article figure {
+    padding-bottom: 50px;
+  }
+  .journey article figure::before {
+    display: none;
+  }
+  .journey article .journeyDesc {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  .journey article .journeyDesc p {
+    padding: 15px 0;
   }
 }
-/* Landscape phone to portrait tablet */
 /* Landscape phones and down */
+@media (max-width: 450px) {
+  .navigationBar {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 25px;
+  }
+
+  h1 {
+    color: blueviolet;
+    font-size: 5rem;
+  }
+
+  header .mainHeader {
+    height: 100vh;
+  }
+  header .mainHeader .headerTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+  }
+  header .mainHeader .headerTitle .sophieTitle {
+    height: auto;
+    padding: 0;
+    position: absolute;
+    top: 75%;
+    left: calc(25% / 2);
+  }
+  header .mainHeader .headerTitle .sophieImg {
+    position: absolute;
+    top: 12%;
+    left: 35%;
+    width: 55%;
+  }
+  header .mainHeader .headerTitle .circleText {
+    width: 120px;
+    top: -25px;
+    left: -30px;
+  }
+
+  .home .who {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .home .who p {
+    width: auto;
+  }
+
+  .articles {
+    height: 200vh;
+  }
+  .articles .article {
+    text-align: center;
+  }
+  .articles .article .articleImg {
+    width: 80%;
+    padding-bottom: 40px;
+  }
+  .articles .article1 article {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .articles .article1 article button {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .articles .article2 article {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .moreLinks {
+    padding: 75px 0;
+  }
+  .moreLinks .wrapper .linksRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
+  }
+  .moreLinks .wrapper .linksRow .link {
+    padding-right: 0;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc {
+    padding: 25px;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc h3 {
+    text-align: center;
+  }
+  .moreLinks .wrapper .linksRow .link .photosDesc p {
+    padding: 25px 0;
+  }
+  .moreLinks .wrapper .linksRow .link .photosIcon {
+    left: 200px;
+    top: -20px;
+  }
+  .moreLinks .wrapper .linksRow .link .photosIcon::before {
+    width: 50px;
+    height: 50px;
+    left: -15px;
+  }
+
+  .backgroundImgClassroom {
+    height: 250px;
+  }
+
+  .journey {
+    background-color: #cecdcc;
+  }
+  .journey article figure {
+    padding-bottom: 50px;
+  }
+  .journey article figure::before {
+    display: none;
+  }
+  .journey article .journeyDesc {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .journey article .journeyDesc p {
+    padding: 15px 0;
+  }
+
+  .travelPhotos .wrapper {
+    display: block;
+  }
+  .travelPhotos .wrapper .travelPhoto {
+    padding-bottom: 25px;
+  }
+}
