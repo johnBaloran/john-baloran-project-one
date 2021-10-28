@@ -8,7 +8,6 @@ nav {
     height: 100%;
     align-items: center;
     margin: 0 auto;
-    border: red 1px solid;
 
     li {
       list-style: none;
@@ -32,11 +31,51 @@ nav {
     }
   }
 }
+.collapsible-menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  width: 400px;
+  height: 400px;
+  .menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 50px 0 0 30px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    display: block;
+    padding: 20px 0;
+    text-decoration: none;
+  }
+  label {
+    top: 0;
+    left: 15px;
+    position: absolute;
+    cursor: pointer;
+    margin: 20px 0 10px 0;
+  }
+  #menu {
+    display: none;
+  }
+  input:checked ~ .menu-content {
+    max-height: 100%;
+  }
+}
 
 @media (max-width: 1024px) {
+  h1 {
+    text-align: center;
+  }
   nav {
     ul {
-      width: 70%;
+      width: 80%;
     }
   }
 }
@@ -49,14 +88,17 @@ nav {
 @media (max-width: 768px) {
   nav {
     ul {
-      width: 75%;
+      width: 95%;
     }
   }
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   nav {
     display: none;
+  }
+  .collapsible-menu {
+    display: block;
   }
 }

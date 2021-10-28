@@ -1,0 +1,591 @@
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  h1 {
+    color: blue;
+    font-size: 8rem;
+  }
+  header {
+    .mainHeader {
+      .headerTitle {
+        .sophieTitle {
+          padding: 90px 0 0 40px;
+        }
+
+        .circleText {
+          width: 150px;
+          top: 40px;
+        }
+      }
+    }
+  }
+  .home {
+    .who {
+      padding: 100px 0;
+    }
+  }
+  .articles {
+    .article1 {
+      article {
+        padding: 50px 0 25px 75px;
+      }
+      .articleImg {
+        &::before {
+          height: 95%;
+        }
+      }
+    }
+    .article2 {
+      .articleImg {
+        bottom: -60px;
+
+        &::before {
+          height: 95%;
+        }
+      }
+    }
+  }
+  .moreLinks {
+    padding: 50px 0;
+    .wrapper {
+      .linksRow {
+        .link {
+          .photosDesc {
+            p {
+              padding: 15px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .backgroundImgClassroom {
+    height: 400px;
+  }
+  .journey {
+    background-color: #cecdcc;
+
+    article {
+      figure {
+        flex-basis: 30%;
+      }
+      .journeyDesc {
+        flex-basis: 70%;
+
+        p {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  html {
+    font-size: 12px;
+  }
+  h1 {
+    color: red;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  header {
+    .mainHeader {
+      height: 75vh;
+
+      .headerTitle {
+        .sophieTitle {
+          padding: 70px 0 0 30px;
+        }
+
+        .circleText {
+          width: 130px;
+          top: 35px;
+        }
+
+        .sophieImg {
+          top: 15px;
+        }
+      }
+    }
+  }
+
+  .home {
+    .who {
+      padding: 100px 0;
+    }
+  }
+  .articles {
+    height: 90vh;
+    .article1 {
+      padding-bottom: 0px;
+      article {
+        padding: 30px 0 45px 75px;
+      }
+      .articleImg {
+        &::before {
+          height: 90%;
+        }
+      }
+    }
+    .article2 {
+      .articleImg {
+        bottom: -55px;
+
+        &::before {
+          height: 90%;
+        }
+      }
+    }
+  }
+  .moreLinks {
+    margin-top: -25px;
+    padding: 40px 0;
+    .wrapper {
+      .linksRow {
+        .link {
+          .photosDesc {
+            p {
+              padding: 15px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .backgroundImgClassroom {
+    height: 400px;
+  }
+  .journey {
+    background-color: #cecdcc;
+
+    article {
+      figure {
+        flex-basis: 30%;
+      }
+      .journeyDesc {
+        flex-basis: 70%;
+
+        p {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  h1 {
+    color: pink;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  header {
+    .mainHeader {
+      height: 65vh;
+    }
+  }
+
+  .articles {
+    position: static;
+    z-index: 9999;
+    height: 145vh;
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 0;
+
+      .articleImg {
+        width: 50%;
+        padding-bottom: 25px;
+      }
+      article {
+        flex-basis: 50%;
+
+        p {
+          padding: 15px 0;
+        }
+      }
+    }
+    .article1 {
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px;
+      }
+      .articleImg {
+        position: static;
+        top: -40px;
+
+        &::before {
+          display: none;
+          content: "";
+          background-color: #a82706;
+          width: 150%;
+          height: 100%;
+          position: absolute;
+          z-index: -1;
+          top: 20px;
+          right: -20px;
+        }
+      }
+    }
+    .article2 {
+      flex-direction: column;
+
+      .articleImg {
+        position: static;
+        bottom: -80px;
+
+        z-index: -1;
+        &::before {
+          display: none;
+          content: "";
+          background-color: #f6a823;
+          width: 150%;
+          height: 100%;
+          // position: absolute;
+          z-index: -1;
+          top: 20px;
+          left: 20px;
+        }
+      }
+      article {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        text-align: start;
+      }
+    }
+  }
+  .moreLinks {
+    margin-top: 0px;
+    padding: 0;
+    padding-bottom: 50px;
+    .wrapper {
+      .linksRow {
+        .link {
+          .photosDesc {
+            p {
+              padding: 10px 0;
+            }
+          }
+          .photosIcon {
+            &::before {
+              width: 50px;
+              height: 50px;
+              top: -16px;
+              left: -14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .journey {
+    background-color: #cecdcc;
+
+    article {
+      flex-direction: column;
+      justify-content: space-around;
+      figure {
+        padding-bottom: 50px;
+        &::before {
+          display: none;
+        }
+      }
+      .journeyDesc {
+        flex-basis: 70%;
+
+        p {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 450px) {
+  .navigationBar {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    padding: 25px;
+  }
+  h1 {
+    color: blueviolet;
+    font-size: 5rem;
+  }
+  header {
+    .mainHeader {
+      height: 85vh;
+
+      .headerTitle {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        height: 100vh;
+        position: relative;
+
+        .sophieTitle {
+          padding: 0;
+          position: absolute;
+          top: 60%;
+          left: calc(25% / 2);
+        }
+        .sophieImg {
+          position: absolute;
+          top: 12%;
+          left: 35%;
+          width: 55%;
+        }
+        .circleText {
+          width: 120px;
+          top: -25px;
+          left: -30px;
+        }
+      }
+    }
+  }
+  .blogHeader,
+  .contactHeader {
+    height: 50vh;
+  }
+  .backgroundImgSophie {
+    padding-top: 100px;
+  }
+
+  .blog h1,
+  .contact h1 {
+    // font-size: 6rem;
+    margin-top: 0;
+    padding-top: 50px;
+  }
+  .home {
+    .who {
+      padding: 50px 0;
+      text-align: center;
+      p {
+        width: auto;
+      }
+    }
+  }
+  .articles {
+    height: 170vh;
+
+    .article {
+      text-align: center;
+
+      .articleImg {
+        width: 80%;
+        padding-bottom: 40px;
+      }
+    }
+    .article1 {
+      article {
+        align-items: center;
+        button {
+          align-self: center;
+        }
+      }
+    }
+    .article2 {
+      article {
+        align-items: center;
+      }
+    }
+  }
+
+  .moreLinks {
+    padding: 75px 0;
+    .wrapper {
+      .linksRow {
+        flex-direction: column;
+        padding-top: 0;
+        .link {
+          padding-right: 0;
+
+          .photosDesc {
+            padding: 25px;
+
+            p {
+              padding: 25px 0;
+            }
+          }
+          .photosIcon {
+            left: 0px;
+            top: 26px;
+            &::before {
+              width: 50px;
+              height: 50px;
+
+              left: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .backgroundImgClassroom {
+    height: 250px;
+  }
+  .journey {
+    background-color: #cecdcc;
+
+    article {
+      figure {
+        padding-bottom: 50px;
+        &::before {
+          display: none;
+        }
+      }
+      .journeyDesc {
+        text-align: center;
+        padding-left: 0px;
+        p {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+  .travelPhotos {
+    .wrapper {
+      display: block;
+      .travelPhoto {
+        padding-bottom: 25px;
+      }
+    }
+  }
+
+  .contact {
+    background-color: #cecdcc;
+
+    .contactForm {
+      flex-direction: column-reverse;
+      padding: 100px 0;
+
+      .contacts {
+        border: solid 1px red;
+        margin-top: 50px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 30%;
+        margin-right: 25px;
+        padding: 25px 0px;
+        width: 100%;
+        height: 300px;
+        .socialMediaLinks {
+          color: #f6a823;
+          i {
+            padding-right: 35px;
+          }
+        }
+        .contactDesc {
+          .bold {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+  .blog {
+    background-color: #cecdcc;
+
+    .blogBody {
+      flex-direction: column;
+      padding: 50px 0;
+      .aside {
+        margin-right: 0px;
+        aside {
+          border: solid 1px red;
+
+          padding: 30px;
+          h4 {
+            padding: 25px 0 15px 0;
+            text-align: center;
+          }
+        }
+        .recentPosts {
+          h4 {
+            padding: 0 0 15px 0;
+          }
+          ul {
+            padding-left: 10px;
+            list-style: none;
+            li {
+              margin-bottom: 5px;
+
+              &::before {
+                content: "\2022";
+                color: #f6a823;
+                display: inline-block;
+                width: 15px;
+              }
+              a {
+                font-family: inherit;
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      .article {
+        flex-basis: 65%;
+        article {
+          background-color: #fff;
+          padding: 30px;
+          margin-bottom: 50px;
+          &:nth-child(odd) {
+            position: relative;
+            &::before {
+              content: "";
+              width: 100%;
+              height: 5px;
+              background-color: #f6a823;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+          }
+          &:not(:first-child) {
+            display: flex;
+            figure {
+              border: red 1px solid;
+              flex-basis: 150%;
+              margin-right: 15px;
+            }
+          }
+          p {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

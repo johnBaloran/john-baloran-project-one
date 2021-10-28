@@ -16,7 +16,6 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  border: red 1px solid;
 }
 nav ul li {
   list-style: none;
@@ -40,22 +39,68 @@ nav ul li:first-child a {
   color: #fff;
 }
 
+.collapsible-menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  width: 400px;
+  height: 400px;
+}
+.collapsible-menu .menu-content {
+  max-height: 0;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 50px 0 0 30px;
+}
+.collapsible-menu ul {
+  list-style-type: none;
+}
+.collapsible-menu a {
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+}
+.collapsible-menu label {
+  top: 0;
+  left: 15px;
+  position: absolute;
+  cursor: pointer;
+  margin: 20px 0 10px 0;
+}
+.collapsible-menu #menu {
+  display: none;
+}
+.collapsible-menu input:checked ~ .menu-content {
+  max-height: 100%;
+}
+
 @media (max-width: 1024px) {
+  h1 {
+    text-align: center;
+  }
+
   nav ul {
-    width: 70%;
+    width: 80%;
   }
 }
 /* Portrait tablet and small desktops */
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   nav ul {
-    width: 75%;
+    width: 95%;
   }
 }
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   nav {
     display: none;
+  }
+
+  .collapsible-menu {
+    display: block;
   }
 }
 form {
@@ -95,7 +140,6 @@ form textarea {
 
 /*
 Color palette$
-
 */
 * {
   -webkit-box-sizing: border-box;
@@ -914,7 +958,7 @@ footer {
   }
 
   header .mainHeader {
-    height: 100vh;
+    height: 85vh;
   }
   header .mainHeader .headerTitle {
     -webkit-box-orient: vertical;
@@ -926,10 +970,9 @@ footer {
     position: relative;
   }
   header .mainHeader .headerTitle .sophieTitle {
-    height: auto;
     padding: 0;
     position: absolute;
-    top: 75%;
+    top: 60%;
     left: calc(25% / 2);
   }
   header .mainHeader .headerTitle .sophieImg {
@@ -944,6 +987,21 @@ footer {
     left: -30px;
   }
 
+  .blogHeader,
+.contactHeader {
+    height: 50vh;
+  }
+
+  .backgroundImgSophie {
+    padding-top: 100px;
+  }
+
+  .blog h1,
+.contact h1 {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+
   .home .who {
     padding: 50px 0;
     text-align: center;
@@ -953,7 +1011,7 @@ footer {
   }
 
   .articles {
-    height: 200vh;
+    height: 170vh;
   }
   .articles .article {
     text-align: center;
@@ -993,15 +1051,12 @@ footer {
   .moreLinks .wrapper .linksRow .link .photosDesc {
     padding: 25px;
   }
-  .moreLinks .wrapper .linksRow .link .photosDesc h3 {
-    text-align: center;
-  }
   .moreLinks .wrapper .linksRow .link .photosDesc p {
     padding: 25px 0;
   }
   .moreLinks .wrapper .linksRow .link .photosIcon {
-    left: 200px;
-    top: -20px;
+    left: 0px;
+    top: 26px;
   }
   .moreLinks .wrapper .linksRow .link .photosIcon::before {
     width: 50px;
@@ -1035,5 +1090,128 @@ footer {
   }
   .travelPhotos .wrapper .travelPhoto {
     padding-bottom: 25px;
+  }
+
+  .contact {
+    background-color: #cecdcc;
+  }
+  .contact .contactForm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 100px 0;
+  }
+  .contact .contactForm .contacts {
+    border: solid 1px red;
+    margin-top: 50px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 25px;
+    padding: 25px 0px;
+    width: 100%;
+    height: 300px;
+  }
+  .contact .contactForm .contacts .socialMediaLinks {
+    color: #f6a823;
+  }
+  .contact .contactForm .contacts .socialMediaLinks i {
+    padding-right: 35px;
+  }
+  .contact .contactForm .contacts .contactDesc .bold {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  .blog {
+    background-color: #cecdcc;
+  }
+  .blog .blogBody {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 50px 0;
+  }
+  .blog .blogBody .aside {
+    margin-right: 0px;
+  }
+  .blog .blogBody .aside aside {
+    border: solid 1px red;
+    padding: 30px;
+  }
+  .blog .blogBody .aside aside h4 {
+    padding: 25px 0 15px 0;
+    text-align: center;
+  }
+  .blog .blogBody .aside .recentPosts h4 {
+    padding: 0 0 15px 0;
+  }
+  .blog .blogBody .aside .recentPosts ul {
+    padding-left: 10px;
+    list-style: none;
+  }
+  .blog .blogBody .aside .recentPosts ul li {
+    margin-bottom: 5px;
+  }
+  .blog .blogBody .aside .recentPosts ul li::before {
+    content: "•";
+    color: #f6a823;
+    display: inline-block;
+    width: 15px;
+  }
+  .blog .blogBody .aside .recentPosts ul li a {
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  .blog .blogBody .article {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+  }
+  .blog .blogBody .article article {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+  .blog .blogBody .article article:nth-child(odd) {
+    position: relative;
+  }
+  .blog .blogBody .article article:nth-child(odd)::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #f6a823;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .blog .blogBody .article article:not(:first-child) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .blog .blogBody .article article:not(:first-child) figure {
+    border: red 1px solid;
+    -ms-flex-preferred-size: 150%;
+        flex-basis: 150%;
+    margin-right: 15px;
+  }
+  .blog .blogBody .article article p {
+    padding-bottom: 10px;
   }
 }
