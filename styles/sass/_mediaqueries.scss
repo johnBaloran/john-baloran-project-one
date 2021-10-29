@@ -7,8 +7,10 @@
   }
   h1 {
     color: blue;
+    text-align: center;
     font-size: 8rem;
   }
+
   header {
     .mainHeader {
       .headerTitle {
@@ -192,6 +194,11 @@
   p {
     font-size: 1.5rem;
   }
+  nav {
+    ul {
+      width: 95%;
+    }
+  }
   header {
     .mainHeader {
       height: 65vh;
@@ -326,13 +333,17 @@
 
 /* Landscape phones and down */
 @media (max-width: 450px) {
-  .navigationBar {
+  nav {
+    display: none;
+  }
+  .collapsible-menu {
     display: block;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+  }
+  .title {
+    display: inline-block;
+    color: #fff;
 
-    padding: 25px;
+    padding: 50px 25px 0 0;
   }
   h1 {
     color: blueviolet;
@@ -378,7 +389,6 @@
 
   .blog h1,
   .contact h1 {
-    // font-size: 6rem;
     margin-top: 0;
     padding-top: 50px;
   }
@@ -392,7 +402,7 @@
     }
   }
   .articles {
-    height: 170vh;
+    height: 150vh;
 
     .article {
       text-align: center;
@@ -486,7 +496,6 @@
       padding: 100px 0;
 
       .contacts {
-        border: solid 1px red;
         margin-top: 50px;
         background-color: #fff;
         display: flex;
@@ -523,8 +532,6 @@
       .aside {
         margin-right: 0px;
         aside {
-          border: solid 1px red;
-
           padding: 30px;
           h4 {
             padding: 25px 0 15px 0;
@@ -576,7 +583,6 @@
           &:not(:first-child) {
             display: flex;
             figure {
-              border: red 1px solid;
               flex-basis: 150%;
               margin-right: 15px;
             }

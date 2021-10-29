@@ -20,13 +20,10 @@ nav {
       }
       a {
         text-decoration: none;
-        color: #000;
+        color: $black;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
         text-transform: uppercase;
-      }
-      &:first-child a {
-        color: #fff;
       }
     }
   }
@@ -35,14 +32,15 @@ nav {
   display: none;
   position: absolute;
   z-index: 10000;
-  width: 400px;
+  width: 100px;
   height: 400px;
+
   .menu-content {
     max-height: 0;
     overflow: hidden;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
-    color: #fff;
+    color: $black;
     text-transform: uppercase;
     padding: 50px 0 0 30px;
   }
@@ -60,6 +58,18 @@ nav {
     position: absolute;
     cursor: pointer;
     margin: 20px 0 10px 0;
+
+    &::before {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      top: -10px;
+      left: -12px;
+    }
   }
   #menu {
     display: none;
@@ -67,38 +77,11 @@ nav {
   input:checked ~ .menu-content {
     max-height: 100%;
   }
-}
-
-@media (max-width: 1024px) {
-  h1 {
-    text-align: center;
-  }
-  nav {
-    ul {
-      width: 80%;
-    }
+  input:checked ~ label::before {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-  nav {
-    ul {
-      width: 95%;
-    }
-  }
-}
-
-/* Landscape phones and down */
-@media (max-width: 450px) {
-  nav {
-    display: none;
-  }
-  .collapsible-menu {
-    display: block;
-  }
+.colorWhite {
+  color: #fff;
 }
