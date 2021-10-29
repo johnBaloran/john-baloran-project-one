@@ -1,0 +1,60 @@
+header {
+  .title {
+    display: none;
+  }
+  .blogHeader,
+  .contactHeader {
+    background-color: $orangey-yellow;
+  }
+  .header {
+    background-color: $orangey-yellow;
+  }
+  .mainHeader {
+    height: 90vh;
+    background-color: $orangey-yellow;
+    // z-index: -2;
+
+    .headerTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .sophieTitle {
+        position: relative;
+        height: 250px;
+        padding: 75px 0 0 50px;
+      }
+
+      .circleText {
+        position: absolute;
+        width: 200px;
+        top: 0;
+        left: 0px;
+      }
+
+      .sophieImg {
+        flex-basis: 40%;
+        position: relative;
+        z-index: 9999;
+        top: 50px;
+        left: -20px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+        &::after {
+          content: "";
+          background-color: white;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 20px;
+          top: 20px;
+          z-index: -1;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

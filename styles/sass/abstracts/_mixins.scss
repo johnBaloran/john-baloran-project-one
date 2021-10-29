@@ -1,0 +1,12 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin pseudo-element($color, $width, $height) {
+  content: "";
+  background-color: $color;
+  width: $width;
+  height: $height;
+  position: absolute;
+  z-index: -1;
+}

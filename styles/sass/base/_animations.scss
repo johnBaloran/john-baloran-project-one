@@ -1,0 +1,23 @@
+button {
+  transition: all 0.2s;
+  &:hover,
+  &:focus {
+    transform: translateY(-5px);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+.navHover {
+  transition: color 0.4s;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.borderLink {
+  transition: border 0.1s;
+  &:hover {
+    border-bottom: 2px solid $orangey-yellow;
+  }
+}

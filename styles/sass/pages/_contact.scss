@@ -1,0 +1,37 @@
+.contact {
+  background-color: $white-shade;
+
+  h1 {
+    font-size: 70px;
+    margin-top: -50px;
+  }
+  .contactForm {
+    display: flex;
+    padding: 100px 0;
+
+    .contacts {
+      background-color: #fff;
+      @include flex-column();
+
+      justify-content: center;
+      flex-basis: 30%;
+      margin-right: 25px;
+      padding: 0 20px;
+      height: 300px;
+      .socialMediaLinks {
+        color: $orangey-yellow;
+        padding-bottom: 15px;
+        i {
+          padding-right: 23px;
+        }
+      }
+      .contactDesc {
+        .bold {
+          font-size: 25px;
+          font-weight: bold;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

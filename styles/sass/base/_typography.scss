@@ -46,3 +46,13 @@ button {
   line-height: 32px;
   letter-spacing: 1px;
 }
+
+.emphasis {
+  color: $dark-grey-blue;
+  font-weight: 700;
+  font-style: italic;
+}
+.strong {
+  color: $dark-grey-blue;
+  font-weight: 700;
+}

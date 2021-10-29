@@ -6,7 +6,6 @@
     width: 90%;
   }
   h1 {
-    color: blue;
     text-align: center;
     font-size: 8rem;
   }
@@ -69,7 +68,7 @@
     height: 400px;
   }
   .journey {
-    background-color: #cecdcc;
+    background-color: $white-shade;
 
     article {
       figure {
@@ -89,9 +88,6 @@
 @media (max-width: 940px) {
   html {
     font-size: 12px;
-  }
-  h1 {
-    color: red;
   }
 
   .wrapper {
@@ -166,7 +162,7 @@
     height: 400px;
   }
   .journey {
-    background-color: #cecdcc;
+    background-color: $white-shade;
 
     article {
       figure {
@@ -188,9 +184,7 @@
   html {
     font-size: 10px;
   }
-  h1 {
-    color: pink;
-  }
+
   p {
     font-size: 1.5rem;
   }
@@ -207,51 +201,24 @@
 
   .articles {
     position: static;
-    z-index: 9999;
     height: 145vh;
 
     .article {
-      display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       padding: 50px 0;
 
       .articleImg {
         width: 50%;
         padding-bottom: 25px;
       }
-      article {
-        flex-basis: 50%;
-
-        p {
-          padding: 15px 0;
-        }
-      }
     }
     .article1 {
       article {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
         padding: 0px;
       }
       .articleImg {
         position: static;
-        top: -40px;
-
-        &::before {
-          display: none;
-          content: "";
-          background-color: #a82706;
-          width: 150%;
-          height: 100%;
-          position: absolute;
-          z-index: -1;
-          top: 20px;
-          right: -20px;
-        }
       }
     }
     .article2 {
@@ -259,26 +226,9 @@
 
       .articleImg {
         position: static;
-        bottom: -80px;
-
-        z-index: -1;
-        &::before {
-          display: none;
-          content: "";
-          background-color: #f6a823;
-          width: 150%;
-          height: 100%;
-          // position: absolute;
-          z-index: -1;
-          top: 20px;
-          left: 20px;
-        }
       }
       article {
         padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         align-items: flex-start;
         text-align: start;
       }
@@ -309,8 +259,6 @@
     }
   }
   .journey {
-    background-color: #cecdcc;
-
     article {
       flex-direction: column;
       justify-content: space-around;
@@ -321,8 +269,6 @@
         }
       }
       .journeyDesc {
-        flex-basis: 70%;
-
         p {
           padding: 15px 0;
         }
@@ -346,7 +292,6 @@
     padding: 50px 25px 0 0;
   }
   h1 {
-    color: blueviolet;
     font-size: 5rem;
   }
   header {
@@ -461,7 +406,7 @@
     height: 250px;
   }
   .journey {
-    background-color: #cecdcc;
+    background-color: $white-shade;
 
     article {
       figure {
@@ -489,43 +434,23 @@
   }
 
   .contact {
-    background-color: #cecdcc;
-
     .contactForm {
       flex-direction: column-reverse;
-      padding: 100px 0;
 
       .contacts {
         margin-top: 50px;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        flex-basis: 30%;
-        margin-right: 25px;
         padding: 25px 0px;
         width: 100%;
-        height: 300px;
         .socialMediaLinks {
-          color: #f6a823;
           i {
             padding-right: 35px;
-          }
-        }
-        .contactDesc {
-          .bold {
-            font-size: 25px;
-            font-weight: bold;
-            padding: 10px 0;
           }
         }
       }
     }
   }
   .blog {
-    background-color: #cecdcc;
-
     .blogBody {
       flex-direction: column;
       padding: 50px 0;
@@ -542,53 +467,19 @@
           h4 {
             padding: 0 0 15px 0;
           }
-          ul {
-            padding-left: 10px;
-            list-style: none;
-            li {
-              margin-bottom: 5px;
 
-              &::before {
-                content: "\2022";
-                color: #f6a823;
-                display: inline-block;
-                width: 15px;
-              }
-              a {
-                font-family: inherit;
-                font-size: 1.5rem;
-              }
-            }
+          a {
+            font-family: inherit;
+            font-size: 1.5rem;
           }
         }
       }
       .article {
-        flex-basis: 65%;
         article {
-          background-color: #fff;
-          padding: 30px;
-          margin-bottom: 50px;
-          &:nth-child(odd) {
-            position: relative;
-            &::before {
-              content: "";
-              width: 100%;
-              height: 5px;
-              background-color: #f6a823;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-            }
-          }
           &:not(:first-child) {
-            display: flex;
             figure {
               flex-basis: 150%;
-              margin-right: 15px;
             }
-          }
-          p {
-            padding-bottom: 10px;
           }
         }
       }
