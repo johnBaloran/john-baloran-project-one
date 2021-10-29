@@ -364,10 +364,20 @@
           align-self: center;
         }
       }
+      .articleImg {
+        &::before {
+          display: none;
+        }
+      }
     }
     .article2 {
       article {
         align-items: center;
+      }
+      .articleImg {
+        &::before {
+          display: none;
+        }
       }
     }
   }
