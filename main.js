@@ -8,7 +8,8 @@ const email = document.getElementById("email");
 const allComments = [];
 submitForm.addEventListener("click", (e) => {
   e.preventDefault();
-
+  // condition for comment to be posted: every input must be filled
+  if (name.value === "" || email.value === "" || field.value === "") return;
   // get information from form and put it in an object
   const commentObj = {
     name: name.value,
