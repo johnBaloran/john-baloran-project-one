@@ -56,3 +56,19 @@ button {
   color: $dark-grey-blue;
   font-weight: 700;
 }
+
+.commentBox {
+  .commentEmail {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1px;
+  }
+  .commentName {
+    font-size: 1rem;
+  }
+  .commentDate {
+    font-style: italic;
+  }
+}

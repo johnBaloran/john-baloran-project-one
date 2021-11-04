@@ -279,6 +279,13 @@
 
 /* Landscape phones and down */
 @media (max-width: 450px) {
+  * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+  }
   nav {
     display: none;
   }
